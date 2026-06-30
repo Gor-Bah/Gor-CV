@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бахшиян Гор — CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f4f4f4;
+    color: #222;
+    padding: 30px 20px;
+  }
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px 48px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  }
+
+  /* HEADER */
+  .header {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 28px;
+  }
+  .photo-placeholder {
+    width: 110px;
+    height: 130px;
+    flex-shrink: 0;
+    background: #e8eaf6;
+    border: 2px dashed #b0b8d1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #8896b3;
+    font-size: 11px;
+    text-align: center;
+    border-radius: 4px;
+    gap: 6px;
+  }
+  .photo-placeholder svg { opacity: 0.5; }
+  .header-info { flex: 1; padding-top: 4px; }
+  .name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a2340;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2e6da4;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+  }
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    font-size: 12.5px;
+    color: #444;
+    margin-bottom: 6px;
+  }
+  .meta-row span { display: flex; align-items: center; gap: 5px; }
+  .meta-row .dot { color: #2e6da4; font-size: 16px; line-height: 1; }
+
+  /* DIVIDER */
+  .divider {
+    height: 2px;
+    background: #1a2340;
+    margin: 18px 0 22px;
+  }
+  .divider-thin {
+    height: 1px;
+    background: #d0d6e8;
+    margin: 20px 0;
+  }
+
+  /* SUMMARY */
+  .summary {
+    font-size: 13px;
+    line-height: 1.75;
+    color: #333;
+    margin-bottom: 0;
+  }
+
+  /* SECTION */
+  .section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1a2340;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  /* EXPERIENCE */
+  .job {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 0 24px;
+    margin-bottom: 22px;
+  }
+  .job-left {}
+  .job-company {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a2340;
+    margin-bottom: 3px;
+  }
+  .job-period {
+    font-size: 12px;
+    color: #2e6da4;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  .job-right {}
+  .job-title-line {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 6px;
+  }
+  .job-arrow {
+    color: #2e6da4;
+    margin: 0 4px;
+  }
+  .job-desc {
+    font-size: 12.5px;
+    color: #333;
+    line-height: 1.65;
+  }
+  .job-desc li {
+    margin-bottom: 3px;
+    padding-left: 2px;
+  }
+  .job-desc ul {
+    padding-left: 14px;
+  }
+
+  /* EDUCATION */
+  .edu-block {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 0 24px;
+    margin-bottom: 14px;
+  }
+  .edu-org {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a2340;
+  }
+  .edu-period {
+    font-size: 12px;
+    color: #2e6da4;
+  }
+  .edu-detail {
+    font-size: 12.5px;
+    color: #333;
+    line-height: 1.65;
+  }
+  .edu-course {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+  }
+
+  /* SKILLS */
+  .skills-list {
+    font-size: 12.5px;
+    color: #333;
+    line-height: 1.8;
+    padding-left: 18px;
+  }
+  .skills-list li { margin-bottom: 2px; }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { box-shadow: none; padding: 28px 36px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="photo-placeholder">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="8" r="4" stroke="#8896b3" stroke-width="1.5"/>
+        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#8896b3" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span>Вставьте<br>фото</span>
+    </div>
+    <div class="header-info">
+      <div class="name">Бахшиян Гор</div>
+      <div class="title">Product Manager</div>
+      <div class="meta-row">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" stroke="#2e6da4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> +7 916 323 00 21</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#2e6da4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke="#2e6da4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> gor.bakhsh@gmail.com</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="#2e6da4" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.93 6.36l-1.68 7.92c-.12.56-.46.7-.93.43l-2.57-1.89-1.24 1.19c-.14.14-.26.26-.53.26l.19-2.65 4.84-4.37c.21-.19-.05-.29-.32-.1L7.6 13.77l-2.52-.79c-.55-.17-.56-.55.11-.81l9.85-3.8c.46-.17.86.11.71.99h.08z"/></svg> gbakhshiyan</span>
+      </div>
+      <div class="meta-row">
+        <span><span class="dot">&#9679;</span> Зарплата: <strong>130 000 – 160 000 ₽</strong></span>
+        <span><span class="dot">&#9679;</span> График: полный день</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="summary">
+    Молодой специалист с опытом работы в клиентском сервисе, технической поддержке и продуктовой разработке в IT-компаниях. Прошёл путь от специалиста поддержки до руководителя отдела и product-менеджера. Умею выстраивать процессы с нуля, обучать команды и внедрять инструменты на основе анализа данных и обратной связи пользователей. Ориентирован на результат, быстро обучаюсь и эффективно работаю в условиях неопределённости.
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- EXPERIENCE -->
+  <div class="section-title">Опыт работы</div>
+
+  <!-- Job 1 -->
+  <div class="job">
+    <div class="job-left">
+      <div class="job-company">Бронируй Онлайн<br><span style="font-weight:400;font-size:12px;color:#555;">(IT-компания)</span></div>
+      <div class="job-period">Июль 2023 — Ноябрь 2024<br>(1 год 4 месяца)</div>
+    </div>
+    <div class="job-right">
+      <div class="job-title-line">
+        Специалист клиентского сервиса <span class="job-arrow">→</span> Руководитель технической поддержки
+      </div>
+      <div class="job-desc">
+        <ul>
+          <li>Выстроил систему классификации обращений по темам и причинам — сформировал структурированный массив данных, который лёг в основу обучения внутреннего ИИ-ассистента поддержки.</li>
+          <li>Возглавил отдел тех. поддержки через 7 месяцев: стандартизировал логику обработки обращений в CRM и сократил среднее время первого ответа с 4 часов до 1,5 часов.</li>
+          <li>Сформировал базу знаний (40+ статей) с типовыми обращениями и сценариями ответов — снизил нагрузку на команду на 25%.</li>
+          <li>Разработал шаблоны ответов и prompt-структуры для чат-бота поддержки, что сократило долю нерелевантных ответов бота на 30%.</li>
+          <li>Выявил повторяющиеся паттерны ошибок и задержек в CRM-процессах — инициировал 3 доработки продукта по итогам анализа.</li>
+          <li>Провёл онбординг и обучение 2 новых специалистов работе с CRM и внутренними AI-инструментами.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider-thin"></div>
+
+  <!-- Job 2 -->
+  <div class="job">
+    <div class="job-left">
+      <div class="job-company">Mailfit<br><span style="font-weight:400;font-size:12px;color:#555;">(агентство CRM-маркетинга)</span></div>
+      <div class="job-period">Ноябрь 2024 — Апрель 2026<br>(1 год 5 месяцев)</div>
+    </div>
+    <div class="job-right">
+      <div class="job-title-line">Product Manager</div>
+      <div class="job-desc">
+        <ul>
+          <li>Проектировал систему метрик производительности продукта и клиентского сервиса — разработал дашборды в Metabase, сократив время на еженедельную отчётность на 60%.</li>
+          <li>Настроил автоматические уведомления при превышении пороговых значений SLA и задержках — время реакции команды на инциденты сократилось на 40%.</li>
+          <li>Запустил модуль персонализации на основе ИИ и обучил команду работе с новыми AI-функциями — open rate клиентских кампаний вырос на 22%.</li>
+          <li>Сформировал обучающие инструкции и сценарии для чат-бота на основе анализа реальных обращений — улучшил точность ответов бота и снизил эскалацию на операторов на 28%.</li>
+          <li>Выстроил процесс сбора обратной связи (user interviews, NPS) и поставил задачи разработчикам по итогам анализа — реализовал 12 улучшений продукта.</li>
+          <li>Наладил контроль корректности логики CRM: выявил дублирования, незакрытые обращения и системные ошибки — снизил количество повторных обращений на 35%.</li>
+          <li>Построил CJM клиента от первого касания до повторной покупки — выявил 4 ключевые точки оттока и сформировал рекомендации для команды по устранению барьеров.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- EDUCATION -->
+  <div class="section-title">Образование</div>
+
+  <div class="edu-block">
+    <div>
+      <div class="edu-org">РАНХиГС при Президенте РФ</div>
+      <div class="edu-period">2022–2026</div>
+    </div>
+    <div class="edu-detail">
+      Факультет: Гостеприимство<br>
+      Специальность: Туризм
+    </div>
+  </div>
+
+  <div style="height:10px;"></div>
+
+  <div class="edu-block">
+    <div style="font-size:13px;color:#555;">Яндекс Практикум</div>
+    <div class="edu-detail"><span class="edu-course">Продакт-менеджер с нуля</span></div>
+  </div>
+
+  <div class="edu-block">
+    <div style="font-size:13px;color:#555;">Skillbox</div>
+    <div class="edu-detail"><span class="edu-course">Управление клиентским сервисом</span></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SKILLS -->
+  <div class="section-title">Ключевые навыки</div>
+
+  <ul class="skills-list">
+    <li>Управление продуктом: бэклог, приоритизация (RICE, MoSCoW), дорожная карта, спринты.</li>
+    <li>Клиентский сервис: выстраивание процессов, метрики качества (CSAT, FCR, TTR).</li>
+    <li>Работа с ИИ-инструментами: промпт-инжиниринг, внедрение AI в продукт, обучение команды.</li>
+    <li>Процессное управление: регламентация, описание бизнес-процессов, онбординг.</li>
+    <li>Инструменты: Jira, Notion, Confluence, Bitrix24, AmoCRM, Miro, Metabase.</li>
+    <li>Быстрая обучаемость, структурное мышление, ориентация на результат.</li>
+  </ul>
+
+</div>
+</body>
+</html>
